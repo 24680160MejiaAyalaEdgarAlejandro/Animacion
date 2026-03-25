@@ -57,7 +57,7 @@ Para replicar este proyecto o realizar un mantenimiento del archivo `.blend`, se
 ---
 
 <div align="center">
-  <h1> 🎨 3. Especificaciones de Diseño y Materiales </h1>
+  <h1>  3. Especificaciones de Diseño y Materiales </h1>
 </div>
 
 Se implementó un sistema de materiales tipo "Toon Shade" para mantener una estética limpia y legible.
@@ -81,3 +81,9 @@ Se implementó un sistema de materiales tipo "Toon Shade" para mantener una est�
 12 [Passing]  -> Pierna de apoyo vertical.
 18 [Up]       -> Extensión del cuerpo (Stretch).
 24 [Contact]  -> Inversión de pies para ciclo continuo.
+```
+<div align="center">
+  <h3> 🛠️ Creacion </h3>
+</div>
+
+
