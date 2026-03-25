@@ -83,7 +83,69 @@ Se implementó un sistema de materiales tipo "Toon Shade" para mantener una est�
 24 [Contact]  -> Inversión de pies para ciclo continuo.
 ```
 <div align="center">
-  <h3> 🛠️ Creacion </h3>
+  <h1> 🛠️ Guía de Ejecución Técnica ("How To") </h1>
+  <p>Basado en el flujo de trabajo de animación profesional para ciclos de caminata.</p>
 </div>
 
+### 1. Configuración de Referencia y Escala
+Antes de animar, es vital tener una base sólida. Se configuró el Viewport en modo ortográfico lateral.
+* **Paso:** Importar la secuencia de poses y alinear el suelo con el eje global de Blender.
+* **Ajuste:** Configurar la opacidad de la referencia al 50% para visibilidad del modelo.
+
+<img width="1919" height="884" alt="image" src="https://github.com/user-attachments/assets/55306027-f937-4f09-adcc-9708c030b0e9" />
+
+---
+
+### 2. Creación de Poses Clave (Blocking)
+Siguiendo el método de "Key Poses", se definieron los 4 estados fundamentales del ciclo:
+
+1.  **Contact (Contacto):** El punto donde ambos pies tocan el suelo. Define el largo del paso.
+2.  **Down (Bajada):** El punto de máxima compresión donde el cuerpo absorbe el impacto.
+3.  **Passing (Paso):** El equilibrio sobre una sola pierna mientras la otra avanza.
+4.  **Up (Subida):** El impulso máximo antes de caer al siguiente contacto.
+
+<img width="841" height="238" alt="image" src="https://github.com/user-attachments/assets/51df5b41-f04a-47db-9e3c-70f89490ea79" />
+
+---
+
+### 3. Uso de Interpolación Constante (Step Mode)
+Para evitar que Blender intente adivinar el movimiento antes de tiempo, se utilizó el modo de interpolación **Constant**.
+* **Técnica:** Seleccionar todos los Keyframes en el *Graph Editor* y presionar `T > Constant`.
+* **Resultado:** Esto permite ver la animación como "recortes", asegurando que cada pose sea fuerte y clara antes de suavizarla.
+
+<img width="874" height="631" alt="image" src="https://github.com/user-attachments/assets/3cac417b-04f3-4554-8a45-6f2b9df15203" />
+
+---
+
+### 4. El Ciclo Infinito (Cycles F-Curve Modifier)
+Para no tener que copiar y pegar poses infinitamente, se aplicó un modificador de curva:
+* **Paso:** En el Graph Editor, se seleccionaron los canales de transformación y se añadió el modificador **Cycles**.
+* **Beneficio:** El pingüino caminará automáticamente durante toda la duración de la línea de tiempo.
+
+<img width="1063" height="932" alt="image" src="https://github.com/user-attachments/assets/c6db302e-2bf3-4f0c-b9fa-7c9e0624892f" />
+
+---
+
+
+
+<div align="center">
+  <h1> 🚀 Resultado Final </h1>
+  <img width="1362" height="408" alt="image" src="https://github.com/user-attachments/assets/1b09b189-fed6-4d12-9d86-3c3883ba086a" />
+
+</div>
+
+---
+
+<div>
+  <h2> 📚 Referencias Bibliográficas </h2>
+  <ul>
+    <li>Blender Foundation (2026). Blender 5.0 Reference Manual.</li>
+    <li>DillonGoo (2020). <i>How to Animate in Blender</i> [Video Tutorial].</li>
+    <li>Williams, R. (2001). The Animator's Survival Kit.</li>
+  </ul>
+</div>
+
+<div align="center">
+  <sub>Ingeniería en Sistemas Computacionales | Unidad 2 | Tecnológico de Cuautla</sub>
+</div>
 
